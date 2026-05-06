@@ -3,13 +3,14 @@
 #include "godot_cpp/classes/ref_counted.hpp"
 #include "godot_cpp/classes/wrapped.hpp"
 #include "godot_cpp/variant/variant.hpp"
-#include <string.h>
 
 using namespace godot;
 
+/*
 extern "C" {
-	int roll_dice_string(std::string);
+	int roll_dice_string(const char*);
 }
+*/
 
 class ExampleClass : public RefCounted {
 	GDCLASS(ExampleClass, RefCounted)
@@ -22,5 +23,5 @@ public:
 	~ExampleClass() override = default;
 
 	void print_type(const Variant &p_variant) const;
-	int roll_dice(std::string);
+	int roll_dice(const char* dice);
 };
