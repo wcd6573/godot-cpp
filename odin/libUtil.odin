@@ -302,7 +302,7 @@ the values from being negative, but that just created a headache
 with type conversions. Assert statements do practically the same
 thing of ensuring valid values, and they also include an error message.
 */
-//@(export)
+@(export=true, link_name="roll_dice_mod")
 roll_dice_mod :: proc "c" (count, size, mod: int) -> (result: int) {
     context = runtime.default_context()
     // Need to put the parameter shadowing at the very start
@@ -377,7 +377,7 @@ together, and the result (int) is returned.
 TODO: Move this to main so that util doesn't have to 
       import so much? Hmmm... Not sure.
 */
-@(export=true, link_name="roll_dice_string")
+//@(export=true, link_name="roll_dice_string")
 roll_dice_string :: proc "c" (cdice: cstring) -> (int){
     context = runtime.default_context()
     dice: string = string(cdice)

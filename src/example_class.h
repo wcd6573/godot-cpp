@@ -23,5 +23,5 @@ public:
 	~ExampleClass() override = default;
 
 	void print_type(const Variant &p_variant) const;
-	int roll_dice(const char* dice);
+	int roll_dice(int count, int size, int mod);
 };
