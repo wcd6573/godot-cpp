@@ -15,6 +15,5 @@ void ExampleClass::print_type(const Variant &p_variant) const {
 }
 
 int ExampleClass::roll_dice(int count, int size, int mod){
-	//return roll_dice_mod(count, size, mod);
-	return 0;
+	return roll_dice_mod(count, size, mod);
 }

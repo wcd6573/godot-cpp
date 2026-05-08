@@ -55,3 +55,11 @@ web.wasm32.single.debug = "./web/libplaytest-aid.web.template_debug.wasm32.nothr
 web.wasm32.double.debug = "./web/libplaytest-aid.web.template_debug.wasm32.double.nothreads.wasm"
 web.wasm32.single.release = "./web/libplaytest-aid.web.template_release.wasm32.nothreads.wasm"
 web.wasm32.double.release = "./web/libplaytest-aid.web.template_release.wasm32.double.nothreads.wasm"
+
+[dependencies]
+windows.debug = {
+   "./windows/libUtil.dll" : ""
+}
+windows.release = {
+   "./windows/libUtil.dll" : ""
+}
