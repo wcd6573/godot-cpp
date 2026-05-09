@@ -609,3 +609,9 @@ remove_status_all :: proc "c" (entity: ^Entity, status: Statuses){
     // Remove all stacks of status
     entity.status[status] = 0
 }
+
+@(export, link_name="get_pair")
+get_pair :: proc "c" () -> (Pair(i32)){
+    pair := Pair(i32){3, 5}
+    return pair
+}

@@ -1,13 +1,10 @@
 #include "example_class.h"
 
-extern "C"{
-	#include "util.h"
-}
-
 
 void ExampleClass::_bind_methods() {
 	godot::ClassDB::bind_method(D_METHOD("print_type", "variant"), &ExampleClass::print_type);
 	godot::ClassDB::bind_method(D_METHOD("roll_dice", "count", "size", "mod"), &ExampleClass::roll_dice);
+	godot::ClassDB::bind_method(D_METHOD("print_int_pair"), &ExampleClass::print_int_pair);
 }
 
 void ExampleClass::print_type(const Variant &p_variant) const {
@@ -16,4 +13,9 @@ void ExampleClass::print_type(const Variant &p_variant) const {
 
 int ExampleClass::roll_dice(int count, int size, int mod){
 	return roll_dice_mod(count, size, mod);
+}
+
+void ExampleClass::print_int_pair() {
+	Pair p = get_pair();
+	print_line(vformat("Current: %d, Max: %d", p.current, p.max));
 }

@@ -4,6 +4,10 @@
 #include "godot_cpp/classes/wrapped.hpp"
 #include "godot_cpp/variant/variant.hpp"
 
+extern "C"{
+	#include "util.h"
+}
+
 using namespace godot;
 
 /*
@@ -24,4 +28,6 @@ public:
 
 	void print_type(const Variant &p_variant) const;
 	int roll_dice(int count, int size, int mod);
+	
+	void print_int_pair();
 };
