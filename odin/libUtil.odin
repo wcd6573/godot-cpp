@@ -377,7 +377,7 @@ together, and the result (int) is returned.
 TODO: Move this to main so that util doesn't have to 
       import so much? Hmmm... Not sure.
 */
-//@(export=true, link_name="roll_dice_string")
+@(export=true, link_name="roll_dice_string")
 roll_dice_string :: proc "c" (cdice: cstring) -> (int){
     context = runtime.default_context()
     dice: string = string(cdice)

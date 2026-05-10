@@ -12,7 +12,7 @@ void ExampleClass::print_type(const Variant &p_variant) const {
 }
 
 int ExampleClass::roll_dice(int count, int size, int mod){
-	return roll_dice_mod(count, size, mod);
+	return roll_dice_string("2d6+4");
 }
 
 void ExampleClass::print_int_pair() {
