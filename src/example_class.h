@@ -30,4 +30,12 @@ public:
 	int roll_dice(int count, int size, int mod);
 	
 	void print_int_pair();
+
+	void set_global_test_int_pointer();
+	void read_global_test_int();
+	void set_global_test_int(int v);
+	void read_pointer();
+	void set_pointer(int v);
+	
+	int* global_test_int;
 };

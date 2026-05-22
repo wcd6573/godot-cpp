@@ -39,6 +39,25 @@ Statuses :: enum {
    BLEED,
 }
 
+global_test_int: i32 = 4;
+
+
+@(export, link_name="pointer_to_test_int")
+pointer_to_test_int :: proc() -> ^i32 {
+    return &global_test_int;
+}
+
+
+@(export, link_name="read_test_int")
+read_test_int :: proc() -> i32 {
+    return global_test_int;
+}
+
+@(export, link_name="set_test_int")
+set_test_int :: proc(v: i32) {
+    global_test_int = v;
+}
+
 /*
 Narai Risser, William Duprey
 3/31/26
